@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -23,7 +23,7 @@
           </a>
         </li>
         <?php
-          if(isset($_GET["page"]) && ($_GET["page"] == "utilisateur" || $_GET["page"]=="message" || $_GET["page"]== "mesproduits" || $_GET["page"]=="ajouter")) {
+         /* if(isset($_GET["page"]) && ($_GET["page"] == "utilisateur" || $_GET["page"]=="message" || $_GET["page"]== "mesproduits" || $_GET["page"]=="ajouter")) {
             ?>
               <li class="nav-item">
                 <a class="nav-link" href="?page=utilisateur">Information utilisateur</a>
@@ -83,10 +83,69 @@
               
               <?php
             }
-          }
+          }*/
         ?>
       </ul>
     </div>
   </div>
 </nav>
+-->
 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeTreasure</title>
+    <link rel="stylesheet" href="../styles/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <nav id="navbar">
+    <div id="nav-item-left">
+      <a href="?page=accueil">Montres</a>
+      <a href="?page=inscription">Quartz</a>
+      <a href="?page=connexion">Mécaniques</a>
+    </div>
+
+    <div id="logo-navbar-container">
+      <a href="?page=accueil"><img src="../img/logo.svg" alt="logo"></a>
+    </div>
+
+    <div id="nav-item-right">
+      <a href="?page=profil"><img src="../img/profil.svg" alt="profil"></a>
+      <a href="?page=panier"><img src="../img/panier.svg" alt="panier"></a>
+    </div>
+  </nav>
+
+
+  
+
+
+<footer>
+  <div id="footer-top">
+    <img src="../img/logo.svg" alt="logo">
+    <div id="footer-nav">
+      <a href="?page=accueil">Toutes les montres</a>
+      <a href="?page=inscription">Quartz</a>
+      <a href="?page=connexion">Mécaniques</a>
+    </div>
+  </div>
+  <div id="footer-bottom">
+    <p>© 2025 TimeTreasure. Tous droits réservés.</p>
+    <div id="footer-bottom-right">
+      <a href="?page=mentions-legales">Mentions légales</a>
+      <a href="?page=cgv">CGV</a>
+      <a href="?page=politique-de-confidentialite">Politique de confidentialité</a>
+    </div>
+  </div>
+</footer>
