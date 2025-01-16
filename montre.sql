@@ -13,9 +13,7 @@ CREATE DATABASE montre
     CONNECTION LIMIT = -1
     IS_TEMPLATE = False;
 
-
-
-CREATE TABLE users (
+	CREATE TABLE users (
     id_user SERIAL PRIMARY KEY,
     nom VARCHAR(30) NOT NULL,
     prenom VARCHAR(30) NOT NULL,
@@ -30,6 +28,7 @@ CREATE TABLE produits (
  id_produit SERIAL PRIMARY KEY,
  nom VARCHAR(80) NOT NULL,
  prix DECIMAL(9,2) NOT NULL,
+ marque VARCHAR(50),
  description TEXT,
  photo TEXT,
  etat VARCHAR(20) NOT NULL,
@@ -51,6 +50,7 @@ CREATE TABLE historique (
  id_historique SERIAL PRIMARY KEY,
  nom VARCHAR(80) NOT NULL,
  prix DECIMAL(9,2) NOT NULL,
+ marque VARCHAR(50),
  description TEXT,
  photo TEXT,
  etat VARCHAR(20) NOT NULL,
@@ -60,10 +60,11 @@ CREATE TABLE historique (
  id_proprio INT REFERENCES users(id_user)
 );
 
+
+
 INSERT INTO users(nom, prenom, pseudo, email, mdp, role, date_naissance) VALUES
 ('perrin', 'giulian', 'giu', 'giulian@gmail.com', 'azertyuiop', '{admin}', '2003-10-05'),
 ('charlet', 'titouan', 'bof', 'titouan.designer@orange.fr','azertyuiop','{user, admin}', '2004-08-19');
 
 INSERT INTO users(nom, prenom, pseudo, email, mdp, date_naissance) VALUES
 ('perrin', 'giulian', 'giu', 'giulia@gmail.com', 'azertyuiop', '2003-10-05');
-select*from users;
