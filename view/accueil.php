@@ -107,8 +107,8 @@
 <div id="section-cta-mecanique">
 <div id="section-cta-mecanique-left">
 <div id="section-cta-mecanique-left-top">
-  <h2 class="title-left">L’Horlogerie Mécanique,<br>Savoir-Faire et Précision</h2>
-  <p class="text-left">Les montres mécaniques sont le cœur battant de l'horlogerie de luxe. Leur mouvement complexe et leur savoir-faire artisanal transcendent le temps, offrant une précision et une élégance incomparables.</p>
+  <h2 class="element-left">L’Horlogerie Mécanique,<br>Savoir-Faire et Précision</h2>
+  <p class="element-left">Les montres mécaniques sont le cœur battant de l'horlogerie de luxe. Leur mouvement complexe et leur savoir-faire artisanal transcendent le temps, offrant une précision et une élégance incomparables.</p>
 </div>
   <a class="btn-primary" href="?page=produits">Explorer les montres mécaniques</a>
 </div>
