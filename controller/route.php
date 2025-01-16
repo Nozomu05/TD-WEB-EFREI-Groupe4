@@ -9,22 +9,22 @@ include "view/header.php";
 switch($page){
     case "accueil":
         $produits = new ProduitController;
-        $produits ->getProduits();
+        $produits ->getProduitsAccueil();
         break;
 
-    case "sport":
+    case "quartz":
         $produits = new ProduitController;
-        $produits -> getProduitsParTypes('sport');
+        $produits -> getProduitsParTypes('quartz');
         break;
 
-    case 'quotidien':
+    case 'mecanique':
         $produits = new ProduitController;
-        $produits -> getProduitsParTypes('quotidien');
+        $produits -> getProduitsParTypes('mécanique');
         break;
 
-    case 'technologie':
+    case 'toutlesproduits':
         $produits = new ProduitController;
-        $produits -> getProduitsParTypes('technologie');
+        $produits -> getProduits();
         break;
 
     case 'inscription':
@@ -72,11 +72,6 @@ switch($page){
         $fin -> fin();
         break;
 
-    case 'message':
-        include_once 'controller/messageController.php';
-        $message = new MessageController;
-        $message -> message();
-        break;
     case 'utilisateur':
         include_once 'controller/userController.php';
         $user = new UserController;

@@ -8,6 +8,11 @@ class ProduitController{
     }
     public function getProduits(){
         $produits = $this->model->getProduits();
+        include_once "view/toutlesproduits.php";
+    }
+
+    public function getProduitsAccueil(){
+        $produits = $this->model->getProduits();
         include_once "view/accueil.php";
     }
 
@@ -23,14 +28,14 @@ class ProduitController{
         if(isset($_POST['type'])){
             $nom = $_POST['nom'];
             $prix = $_POST['prix'];
-            $quantite = $_POST['quantite'];
+            $etat = $_POST['etat'];
             $type = $_POST['type'];
             $description = $_POST["description"];
             include_once "controller/userController.php";
             $userinfo = new UserController;
             $userId = $userinfo ->getUserId($_SESSION["email"]);
             $id_proprio = $userId["id_user"];
-            if($this->model->ajouterProduit($nom,$prix,$quantite,$type,$description,$id_proprio)){
+            if($this->model->ajouterProduit($nom,$prix,$description,$etat,$type,$id_proprio)){
                 echo "produit ajoute";
                 include_once "index.php";
             }
@@ -44,10 +49,6 @@ class ProduitController{
         $produits = $this->model->GetProduitsDetail($id);
         $produit = $produits[0];
         return $produit;
-    }
-
-    public function modifierProduit($id,$quantite){
-        return $this-> model -> modifierProduit($id,$quantite);
     }
 
     public function getProduitsByProprio($id){

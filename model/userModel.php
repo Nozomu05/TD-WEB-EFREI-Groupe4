@@ -6,9 +6,9 @@ class UserModel{
     public function __construct(){
         $this->bdd = Bdd::connexion();
     }
-    public function inscription($nom,$prenom,$pseudonyme,$email,$mdp){
-        $user = $this->bdd->prepare("INSERT INTO users(nom,prenom,pseudonyme,email,mdp) VALUES(?,?,?,?,?)");
-        return $user->execute([$nom,$prenom,$pseudonyme,$email,$mdp]);
+    public function inscription($nom,$prenom,$pseudonyme,$email,$mdp,$date_naissance){
+        $user = $this->bdd->prepare("INSERT INTO users(nom,prenom,pseudo,email,mdp,date_naissance) VALUES(?,?,?,?,?,?)");
+        return $user->execute([$nom,$prenom,$pseudonyme,$email,$mdp,$date_naissance]);
     }
 
     public function getUserByEmail($email){
