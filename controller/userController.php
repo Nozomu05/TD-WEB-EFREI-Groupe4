@@ -29,8 +29,11 @@ class UserController{
                 $pseudonyme = $_POST["pseudo"];
                 $email = $_POST["email"];
                 $date_naissance = $_POST["date"];
+                $date_naissance = $_POST["date"];
                 $mdp = password_hash($_POST["mdp"],PASSWORD_DEFAULT);
 
+
+                if($this->model->inscription($nom,$prenom,$pseudonyme,$email,$mdp,$date_naissance)){
 
                 if($this->model->inscription($nom,$prenom,$pseudonyme,$email,$mdp,$date_naissance)){
                     echo "<script>alert('inscription reussite');</script>";

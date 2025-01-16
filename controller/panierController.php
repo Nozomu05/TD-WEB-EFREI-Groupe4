@@ -25,11 +25,20 @@ class PanierController{
         $pasvide=false;
         $nombredeproduit = $this->getPanier();
         if($nombredeproduit['id_produit']!==0){
+        if($nombredeproduit['id_produit']!==0){
             $pasvide=true;
         }
         include_once "view/finalisation.php";
 
 
+        
+        $produits = $this->getAllProduit();
+        foreach($produits as $produit){
+            if (isset($_POST[$produit['id_produit']])){
+                $index = array_search($produit['id_produit'] . $produit['nom'],$_SESSION);
+                unset($_SESSION[$index]);
+                $this->model->EnleverProduit($produit['id_produit']);
+                header("Location:index.php?page=panier");
         
         $produits = $this->getAllProduit();
         foreach($produits as $produit){
@@ -48,10 +57,19 @@ class PanierController{
         $estajouter = array_search($produit['id_produit'] . $produit['nom'],$_SESSION);
         
         if(isset($_POST['ajout'])){
+        $estajouter = array_search($produit['id_produit'] . $produit['nom'],$_SESSION);
+        
+        if(isset($_POST['ajout'])){
             $nombredeproduit = $this-> getPanier();
+            if ($nombredeproduit['id_produit']===0){
             if ($nombredeproduit['id_produit']===0){
                 $id = $produit['id_produit'];
                 $prix = $produit['prix'];
+                $id_user = $_SESSION['id_user'];
+                $_SESSION[$produit['nom']]=$id . $produit['nom'];
+                $this->model->ajoutPanier($prix,$id_user,$id);
+                echo "<script>alert('Produit ajouté !');</script>";
+                $estajouter = array_search($produit['id_produit'] . $produit['nom'],$_SESSION);
                 $id_user = $_SESSION['id_user'];
                 $_SESSION[$produit['nom']]=$id . $produit['nom'];
                 $this->model->ajoutPanier($prix,$id_user,$id);
@@ -77,6 +95,16 @@ class PanierController{
         }
         include_once "view/produit.php";
         
+                    $id_user = $_SESSION['id_user'];
+                    $_SESSION[$produit['nom']]=$id . $produit['nom'];
+                    $this->model->ajoutPanier($prix,$id_user,$id);
+                    echo "<script>alert('Produit ajouté !');</script>";
+                    $estajouter = array_search($produit['id_produit'] . $produit['nom'],$_SESSION);
+                }
+            }   
+        }
+        include_once "view/produit.php";
+        
     }
 
     public function payer(){
@@ -84,5 +112,6 @@ class PanierController{
         include_once "view/payer.php";
     }
 
+    
     
 }
