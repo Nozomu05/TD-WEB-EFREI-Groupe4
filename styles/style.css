@@ -1,0 +1,450 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #001F3F;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+}
+
+h1 {
+  font-size: 3.815rem;
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+  font-style: normal;
+  color: #fff;
+  line-height: 1.04;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+h2 {
+  font-size: 3.052rem;
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+  font-style: normal;
+  color: #fff;
+  line-height: 1.04;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  color: #fff;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: #A67C00;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.313rem;
+  border: none;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.medium-weight-text {
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    color: #fff;
+    line-height: 1.3;
+    text-align: center;
+}
+
+.small-text {
+    font-size: 0.8rem;
+    font-weight: 300;
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    color: #fff;
+    line-height: 1.3;
+    text-align: center;
+}
+
+.element-left {
+    text-align: left;
+}
+
+.color-alternate {
+    color: #000;
+    background-color: #fff;
+}
+
+select {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 0.313rem;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    line-height: 1.3;
+    width: 100%;
+}
+
+select option {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Navbar */
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  height: 5rem;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+#nav-item-left {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 2rem;
+  width: 40%;
+}
+
+#logo-navbar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+}
+
+#nav-item-right {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  gap: 2rem;
+  width: 40%;
+}
+
+/* Footer */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    max-width: 90%;
+    margin: 0 auto;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    gap: 5rem;
+}
+
+#footer-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+#footer-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+#footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 2rem;
+  border-top: 1px solid #fff;
+}
+
+#footer-bottom-right {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  gap: 1.5rem;
+}
+
+/* Hero section */
+
+#hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5rem;
+  padding-bottom: 7rem;
+  max-width: 90%;
+  margin: 0 auto;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  gap: 5rem;
+}
+
+#hero-section-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+#hero-section-small-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+#hero-section-small-top-p {
+  max-width: 38.438rem;
+}
+
+#hero-section-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Features products */
+
+#features-products {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    max-width: 90%;
+    margin: 0 auto;
+    padding-left: 4rem;
+    padding-right: 4rem;
+     gap: 5rem;
+}
+
+#features-products-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+#features-products-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+#features-products-container-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#features-products-container-item-img {
+    max-width: 18.75rem;
+}
+
+#features-products-container-item-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+/* CTA mecanique */
+
+#section-cta-mecanique {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    max-width: 90%;
+    margin: 0 auto;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    gap: 5rem;
+}
+
+#section-cta-mecanique-left {
+    display: flex;
+    flex-direction: column;
+    max-width: 39.375rem;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+#section-cta-mecanique-left-top {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0.75rem;
+}
+
+/* CTA vente */
+
+#section-cta-vente {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    max-width: 90%;
+    margin: 0 auto;
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+#section-cta-vente-small {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    background-color: #fff;
+    padding: 4rem;
+    width: 100%;
+    border-radius: 0.938rem;
+}
+
+#section-cta-vente-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    background-color: #fff;
+}
+
+/* Products */
+
+#features-products-all {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5rem;
+    padding-bottom: 7rem;
+    max-width: 90%;
+    margin: 0 auto;
+    padding-left: 4rem;
+    padding-right: 4rem;
+     gap: 5rem;
+}
+
+#features-products-top-all {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    max-width: 38.438rem;
+}
+
+#product-filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Product detail */
+
+#product-detail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  max-width: 90%;
+  margin: 0 auto;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  gap: 5rem;
+}
+
+#product-detail-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#product-detail-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 37.5rem;
+    gap: 1.5rem;
+}
+
+#product-detail-right-top {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0.75rem;
+}
+
+
+#product-detail-right-top-price {
+  font-size: 1.563rem;
+  font-weight: 400;
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  color: #fff;
+  line-height: 1.3;
+}
+
+/* Basket */
+
+#basket-products-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#basket-products-top-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0.75rem;
+}

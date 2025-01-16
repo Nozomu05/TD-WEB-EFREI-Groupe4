@@ -5,13 +5,12 @@
     foreach($produits as $produit){
         $prix += $produit['prix']*$produit['quantite'];
         ?> 
-            <?= $produit['nom']?><br><?= $produit['prix']?>
-            quantite: <?=$produit['quantite']?><br><br>
+            <?= $produit['nom']?><br><?= $produit['prix']?>€
         <?php
     }
 ?>
 
-Prix total: <?=$prix?> <br>
+Prix total: <?=$prix?>€ <br>
 
 <a href="?page=merci">
     <button>Payer</button>
