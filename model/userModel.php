@@ -27,4 +27,5 @@ class UserModel{
         $resultat= $this->bdd->query("SELECT * from users WHERE id_user='$id'")->fetchAll(PDO::FETCH_ASSOC);
         return $resultat[0];
     }
+
 }
