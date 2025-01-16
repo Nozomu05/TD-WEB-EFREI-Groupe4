@@ -26,7 +26,7 @@ Description:<br><?=$produit['description']?> <br>
     </div>
     <div id="product-detail-right">
       <div id="product-detail-right-top">
-        <h2 class="element-left">Nom de la montre</h2>
+        <h1 class="element-left">Nom de la montre</h1>
         <p id="product-detail-right-top-price" class="element-left">36 000€</p>
       </div>
       <p class="element-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>

@@ -13,7 +13,7 @@
 
 <div id="features-products">
   <div id="features-products-top">
-    <h2>Vos montres en vente</h2>
+    <h1>Vos montres en vente</h1>
   </div>
   <div id="features-products-container">
 
