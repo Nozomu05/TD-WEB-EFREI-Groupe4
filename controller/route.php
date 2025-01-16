@@ -10,26 +10,20 @@ switch($page){
     case "accueil":
         $produits = new ProduitController;
         $produits ->getProduitsAccueil();
-        $produits ->getProduitsAccueil();
         break;
 
     case "quartz":
-    case "quartz":
         $produits = new ProduitController;
-        $produits -> getProduitsParTypes('quartz');
         $produits -> getProduitsParTypes('quartz');
         break;
 
-    case 'mechanique':
-    case 'mechanique':
+    case 'mecanique':
         $produits = new ProduitController;
-        $produits -> getProduitsParTypes('mécanique');
         $produits -> getProduitsParTypes('mécanique');
         break;
-    case 'toutlesproduits':
+
     case 'toutlesproduits':
         $produits = new ProduitController;
-        $produits -> getProduits();
         $produits -> getProduits();
         break;
 

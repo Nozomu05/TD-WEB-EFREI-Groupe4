@@ -21,7 +21,7 @@
     <div id="nav-item-left">
       <a href="?page=accueil">Montres</a>
       <a href="?page=quartz">Quartz</a>
-      <a href="?page=mechanique">Mécaniques</a>
+      <a href="?page=mecanique">Mécaniques</a>
     </div>
 
     <div id="logo-navbar-container">

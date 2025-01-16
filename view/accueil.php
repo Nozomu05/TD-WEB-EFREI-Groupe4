@@ -108,7 +108,7 @@
   <h2 class="title-left">L’Horlogerie Mécanique,<br>Savoir-Faire et Précision</h2>
   <p class="text-left">Les montres mécaniques sont le cœur battant de l'horlogerie de luxe. Leur mouvement complexe et leur savoir-faire artisanal transcendent le temps, offrant une précision et une élégance incomparables.</p>
 </div>
-  <a class="btn-primary" href="?page=mechanique">Explorer les montres mécaniques</a>
+  <a class="btn-primary" href="?page=mecanique">Explorer les montres mécaniques</a>
 </div>
 <div id="section-cta-mecanique-right">
 <img src="../img/cta-mecanique.webp" alt="cta-mecanique">
@@ -121,6 +121,6 @@
   <h2 class="color-alternate">Vous avez une montre à vendre ?</h2>
   <p class="color-alternate">Si vous possédez une montre d'exception que vous souhaitez vendre,<br>nous sommes là pour vous.</p>
 </div>
-<a class="btn-primary" href="?page=produits">Vendre ma montre</a>
+<a class="btn-primary" href="?page=ajouter">Vendre ma montre</a>
 </div>
 </div>

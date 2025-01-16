@@ -4,7 +4,7 @@
     <div id="footer-nav">
       <a href="?page=accueil">Toutes les montres</a>
       <a href="?page=quartz">Quartz</a>
-      <a href="?page=mechanique">Mécaniques</a>
+      <a href="?page=mecanique">Mécaniques</a>
     </div>
   </div>
   <div id="footer-bottom">

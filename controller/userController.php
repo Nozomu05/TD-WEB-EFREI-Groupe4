@@ -35,15 +35,15 @@ class UserController{
 
                 if($this->model->inscription($nom,$prenom,$pseudonyme,$email,$mdp,$date_naissance)){
 
-                if($this->model->inscription($nom,$prenom,$pseudonyme,$email,$mdp,$date_naissance)){
-                    echo "<script>alert('inscription reussite');</script>";
-                } else{
-                    echo "<script>alert('Erreur lors de l'inscription,veuillez reessayer');</script>";
+                    if($this->model->inscription($nom,$prenom,$pseudonyme,$email,$mdp,$date_naissance)){
+                        echo "<script>alert('inscription reussite');</script>";
+                    } else{
+                        echo "<script>alert('Erreur lors de l'inscription,veuillez reessayer');</script>";
+                    }
                 }
-            }
-        } 
+            } 
+        }
     }
-
     public function getFormConnexion(){
         include_once "view/connexion.php";
     }
