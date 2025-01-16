@@ -108,6 +108,42 @@ select option {
     color: #000;
 }
 
+input[type="text"] {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 0.313rem;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  width: 100%;
+  min-width: 20rem;
+}
+
+input[type="date"] {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 0.313rem;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  width: 100%;
+}
+
+.btn-delete {
+  background-color: #B42318;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.313rem;
+  border: none;
+  cursor: pointer;
+}
+
 /* Navbar */
 
 #navbar {
@@ -390,7 +426,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 7rem;
+  padding-top: 5rem;
   padding-bottom: 7rem;
   max-width: 90%;
   margin: 0 auto;
@@ -447,4 +483,89 @@ footer {
     align-items: flex-start;
     justify-content: flex-start;
     gap: 0.75rem;
+}
+
+/* Commander */
+
+#formulaire {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5rem;
+  padding-bottom: 7rem;
+  max-width: 90%;
+  margin: 0 auto;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  gap: 2rem;
+}
+
+#formulaire-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+#formulaire-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+#formulaire-bottom-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+#nom-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 1rem;
+}
+
+#ville-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 1rem;
+}
+
+#date-expiration-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 1rem;
+}
+
+/* profil */
+
+#formulaire-button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 1rem;
+}
+
+/* inscription */
+
+#formulaire-button-container-vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 1rem;
 }
