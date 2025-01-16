@@ -1,4 +1,4 @@
-<h1>Ajouter un produit</h1>
+<!--<h1>Ajouter un produit</h1>
 
 <form action="" method="post">
   <fieldset>
@@ -32,3 +32,38 @@
     <button type="submit" class="btn btn-primary">Submit</button>
   </fieldset>
 </form>
+
+-->
+
+<div id="formulaire">
+  <div id="formulaire-top">
+    <h1>Vendre une montre</h1>
+  </div>
+
+  <form id="formulaire-bottom" action="?page=finalisation" method="post">
+    <div id="formulaire-bottom-top">
+      <input type="file" name="image" placeholder="Ajouter une image">
+      <input type="text" name="titre" placeholder="Titre">
+      <textarea name="description" placeholder="Description"></textarea>
+      <div id="prix-marque-container">
+        <input type="text" name="prix" placeholder="Prix">
+        <input type="text" name="marque" placeholder="Marque">
+      </div>
+      <div id="type-etat-container">
+        <select name="type">
+          <option value="defaut" selected>Choisir un type</option>
+          <option value="quartz">Quartz</option>
+          <option value="mecanique">Mécanique</option>
+        </select>
+        <select name="etat">
+          <option value="defaut" selected>Choisir un état</option>
+          <option value="neuf">Mauvais état</option>
+          <option value="occasion">Bon état</option>
+          <option value="occasion">Très bon état</option>
+        </select>
+        </div>
+    </div>
+      <input class="btn-primary" type="submit" value="Mettre en vente">
+  </form>
+
+</div>
