@@ -7,8 +7,12 @@
       <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Entrez le nom du produit" name="nom" required>
     </div>
     <div>
-      <label for="exampleInputEmail1" class="form-label mt-4">Entrez la quantite disponible</label>
-      <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Entrez la quantite disponible" step="1" name="quantite" required>
+      <label for="exampleSelect1" class="form-label mt-4" >Selectionnez l'état</label>
+      <select class="form-select" id="exampleSelect1" name="etat">
+        <option value="neuf">neuf</option>
+        <option value="peu usé">peu usé</option>
+        <option value="usé">usé</option>
+      </select>
     </div>
     <div>
       <label for="exampleInputEmail1" class="form-label mt-4">Entrez le prix</label>
@@ -17,9 +21,8 @@
     <div>
       <label for="exampleSelect1" class="form-label mt-4" >Selectionnez le type</label>
       <select class="form-select" id="exampleSelect1" name="type">
-        <option value="technologie">technologie</option>
-        <option value="quotidien">quotidien</option>
-        <option value="sport">sport</option>
+        <option value="mécanique">mécanique</option>
+        <option value="quartz">quartz</option>
       </select>
     </div>
     <div>

@@ -1,19 +1,17 @@
 
 <!--
 <h1>Produits<h1>
-    
+   
 <?php /*foreach($produits as $produit){
     ?> 
         <a href="?page=produit&id=<?=$produit['id_produit']?>">
             <button>
-                <?= $produit['nom']?><br><?= $produit['prix']?>
+                <?= $produit['nom']?><br><?= $produit['prix']?>€
             </button>
         </a>
     <?php
 }*/?>
-
 -->
-
 <div id="hero-section">
 
 <div id="hero-section-top">
@@ -21,7 +19,7 @@
     <h1>L'art de l'horlogerie,<br>redéfinie en seconde main</h1>
     <p id="hero-section-small-top-p">Découvrez des montres rares et intemporelles, parfaites pour les passionnés exigeants qui cherchent à allier luxe et authenticité.</p>
   </div>
-    <a class="btn-primary" href="?page=produits">Trouvez votre montre d'exception</a>
+    <a class="btn-primary" href="?page=toutlesproduits">Trouvez votre montre d'exception</a>
 </div>
 
 <div id="hero-section-bottom">
@@ -100,17 +98,17 @@
 
 </div>
 
-<a class="btn-primary" href="?page=produits">Toutes les montres</a>
+<a class="btn-primary" href="?page=toutlesproduits">Toutes les montres</a>
 
 </div>
 
 <div id="section-cta-mecanique">
 <div id="section-cta-mecanique-left">
 <div id="section-cta-mecanique-left-top">
-  <h2 class="element-left">L’Horlogerie Mécanique,<br>Savoir-Faire et Précision</h2>
-  <p class="element-left">Les montres mécaniques sont le cœur battant de l'horlogerie de luxe. Leur mouvement complexe et leur savoir-faire artisanal transcendent le temps, offrant une précision et une élégance incomparables.</p>
+  <h2 class="title-left">L’Horlogerie Mécanique,<br>Savoir-Faire et Précision</h2>
+  <p class="text-left">Les montres mécaniques sont le cœur battant de l'horlogerie de luxe. Leur mouvement complexe et leur savoir-faire artisanal transcendent le temps, offrant une précision et une élégance incomparables.</p>
 </div>
-  <a class="btn-primary" href="?page=produits">Explorer les montres mécaniques</a>
+  <a class="btn-primary" href="?page=mechanique">Explorer les montres mécaniques</a>
 </div>
 <div id="section-cta-mecanique-right">
 <img src="../img/cta-mecanique.webp" alt="cta-mecanique">
