@@ -78,3 +78,13 @@
   </div>
 
 </div>
+
+<div id="section-cta-vente">
+  <div id="section-cta-vente-small">
+    <div id="section-cta-vente-top">
+      <h2 class="color-alternate">Offrez une nouvelle<br>vie à votre montre</h2>
+      <p class="color-alternate">Vous avez une montre précieuse que vous souhaitez vendre ? Confiez-la à nos experts<br>pour une évaluation gratuite et bénéficiez d’une transaction sécurisée.</p>
+    </div>
+    <a class="btn-primary" href="?page=produits">Vendre ma montre</a>
+  </div>
+</div>
