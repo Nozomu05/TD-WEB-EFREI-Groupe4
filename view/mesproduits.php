@@ -29,4 +29,6 @@
 
 </div>
 
+<a class="btn-primary" href="?page=ajouter">Ajouter un produit</a>
+
 </div> 
