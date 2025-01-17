@@ -26,20 +26,20 @@
     </div>
 
     <div id="logo-navbar-container">
-      <a href="?page=accueil"><img src="../img/logo.svg" alt="logo"></a>
+      <a href="?page=accueil"><img src="img/logo.svg" alt="logo"></a>
     </div>
     <div id="nav-item-right">
       <?php
         if(sizeof($_SESSION)===0){
           ?>
-            <a href="?page=connexion"><img src="../img/profil.svg" alt="profil"></a>
+            <a href="?page=connexion"><img src="img/profil.svg" alt="profil"></a>
           <?php
         }else{
           ?>
-            <a href="?page=utilisateur"><img src="../img/profil.svg" alt="profil"></a>
+            <a href="?page=utilisateur"><img src="img/profil.svg" alt="profil"></a>
           <?php
         }
       ?>
-      <a href="?page=panier"><img src="../img/panier.svg" alt="panier"></a>
+      <a href="?page=panier"><img src="img/panier.svg" alt="panier"></a>
     </div>
   </nav>
