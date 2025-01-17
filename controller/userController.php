@@ -78,6 +78,7 @@ class UserController{
 
     public function details(){
         $infos = $this->model->details($_SESSION["id_user"]);
+        print_r($infos);
         if(isset($_POST['mdp'])){
             if(isset($_POST['save'])){
                 if($_POST['mdp']===$_POST['mdp_conf']){
@@ -107,6 +108,9 @@ class UserController{
                     }
                 </script>
             <?php
+        }
+        if(isset($_POST['deconnexion'])){
+            header("Location:index.php?page=deconnexion");
         }
         include_once "view/utilisateur.php";
     }

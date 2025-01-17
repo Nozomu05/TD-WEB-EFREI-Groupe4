@@ -1,8 +1,3 @@
-<script>
-  function deconnexion(){
-    window.location.href = "?page=deconnexion";
-}
-</script>
 <div id="formulaire">
   <div id="formulaire-top">
     <h1>Mon profil</h1>
@@ -11,12 +6,12 @@
   <form id="formulaire-bottom" action="" method="post">
     <div id="formulaire-bottom-top">
       <div id="nom-container">
-        <input type="text" name="prenom" placeholder="<?=$infos['prenom']?>" >
-        <input type="text" name="nom" placeholder="<?=$infos['nom']?>" >
+        <input type="text" name="prenom" value="<?=$infos['prenom']?>" required>
+        <input type="text" name="nom" value="<?=$infos['nom']?>"required>
       </div>
-      <input type="text" name="email" placeholder="<?=$infos['email']?>" >
-      <input type="text" name="mdp" placeholder="Nouveau mot de passe" >
-      <input type="text" name="mdp_conf" placeholder="Confirmer mot de passe" >
+      <input type="text" name="email" value="<?=$infos['email']?>"required>
+      <input type="text" name="mdp" value="Nouveau mot de passe" required>
+      <input type="text" name="mdp_conf" value="Confirmer mot de passe"required>
     </div>
     <div id="formulaire-button-container">
       <input class="btn-primary" type="submit" name="save" value="Sauvegarder">

@@ -11,7 +11,7 @@
             </div>
             <div id="features-products-container-item-text">
             <div id="features-products-container-item-text-top">
-                <p class="medium-weight-text"><?= $produit['nom']?>€</p>
+                <p class="medium-weight-text"><?= $produit['nom']?></p>
                 <p class="small-text"><?= $produit['type']?></p>
             </div>
             <div id="features-products-container-item-text-bottom">
