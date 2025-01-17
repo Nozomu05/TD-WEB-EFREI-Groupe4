@@ -5,7 +5,7 @@
       <br>vos informations pour que nous puissions préparer l'envoi de votre nouvelle montre.</p>
   </div>
 
-  <form id="formulaire-bottom" action="?page=finalisation" method="post">
+  <form id="formulaire-bottom" action="?page=merci" method="post">
     <div id="formulaire-bottom-top">
       <div id="nom-container">
         <input type="text" name="prenom" placeholder="Prénom">
