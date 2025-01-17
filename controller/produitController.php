@@ -12,8 +12,18 @@ class ProduitController{
     }
 
     public function getProduitsAccueil(){
-        $produits = $this->model->getProduits();
-        include_once "view/accueil.php";
+        $produitsliste = $this->model->getProduitsDecroissant();
+        if(sizeof($produitsliste)<=4){
+            $produits=$this->model->getProduits();
+            include_once "view/accueil.php";
+        }else{
+            $produits = [];
+            for($i=0;$i<=4;$i++){
+                array_push($produits,$produitsliste[$i]);
+            }
+            include_once "view/accueil.php";
+        }
+        
     }
 
     public function getTypeProduits(){
