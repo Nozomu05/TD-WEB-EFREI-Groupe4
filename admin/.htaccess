@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName "Accès réservé"
-AuthUserFile /home/admin/.htpasswd
-Require valid-user
