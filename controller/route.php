@@ -45,6 +45,7 @@ switch($page){
         break;
 
     case "deconnexion":
+        
         $_SESSION=[];
         header("Location: index.php");
         break;

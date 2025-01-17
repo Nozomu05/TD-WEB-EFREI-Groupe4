@@ -1,18 +1,23 @@
-<h1>Mes Infos</h1>
-<?php
-    foreach($infos as $cle => $info) {
-        if($cle !== "id_user" && $cle !== "role"){
-            if($cle === "mdp"){
-                ?>
-                    <h2>mot de passe</h2>
-                    <p>********</p>
-                <?php
-            }else{
-                ?>
-                    <h2><?=$cle?></h2>
-                    <?=$info?>
-                <?php
-            }
-        }
-    }
-?>
+
+<div id="formulaire">
+  <div id="formulaire-top">
+    <h1>Mon profil</h1>
+  </div>
+
+  <form id="formulaire-bottom" action="" method="post">
+    <div id="formulaire-bottom-top">
+      <div id="nom-container">
+        <input type="text" name="prenom" placeholder="<?=$infos['prenom']?>" required>
+        <input type="text" name="nom" placeholder="<?=$infos['nom']?>" required>
+      </div>
+      <input type="text" name="email" placeholder="<?=$infos['email']?>" required>
+      <input type="text" name="mdp" placeholder="Nouveau mot de passe" required>
+      <input type="text" name="mdp_conf" placeholder="Confirmer mot de passe" required>
+    </div>
+    <div id="formulaire-button-container">
+      <input class="btn-primary" type="submit" name="save" value="Sauvegarder">
+      <input class="btn-delete" type="submit" name="del" value="Supprimer mon compte">
+    </div>
+  </form>
+
+</div>

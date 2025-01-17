@@ -78,6 +78,34 @@ class UserController{
 
     public function details(){
         $infos = $this->model->details($_SESSION["id_user"]);
+        if(isset($_POST['mdp'])){
+            if(isset($_POST['save'])){
+                if($_POST['mdp']===$_POST['mdp_conf']){
+                    $prenom = $_POST['prenom'];
+                    $nom = $_POST['nom'];
+                    $email = $_POST['email'];
+                    $mdp = $_POST['mdp'];
+                    $id_user = $_SESSION['id_user'];
+                    $this->model->UpdateUser($prenom,$nom,$email,$mdp,$id_user);
+                }else{
+                    echo 
+                    "
+                        <script>alert('le mot de passe n'est pas le même')</script>
+                    ";
+                }
+            }
+            
+        }
+        if(isset($_POST['del'])){
+            ?>
+                <script>
+                    if(confirm("êtes-vous sûr de vouloir supprimer votre compte ?")){
+                        $_SESSION['supprimer']="supprimer";
+                        window.location.href = "?page=deconnexion";
+                    }
+                </script>
+            <?php
+        }
         include_once "view/utilisateur.php";
     }
 

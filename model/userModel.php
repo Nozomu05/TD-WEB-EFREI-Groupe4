@@ -27,4 +27,14 @@ class UserModel{
         $resultat= $this->bdd->query("SELECT * from users WHERE id_user='$id'")->fetchAll(PDO::FETCH_ASSOC);
         return $resultat[0];
     }
+
+    public function UpdateUser($prenom,$nom,$email,$mdp,$id_user){
+        $commande = $this->bdd->prepare("UPDATE users SET prenom=?,nom=?,email=?,mdp=? WHERE id_user=?");
+        return $commande->execute([$prenom,$nom,$email,$mdp,$id_user]);
+    }
+
+    public function DeleteUser($id){
+        $commande = $this->bdd->prepare("DELETE FROM users WHERE id_user=?");
+        return $commande -> execute([$id]);
+    }
 }
