@@ -12,24 +12,23 @@
         </tr>
     </thead>
     <tbody>
-        <?php foreach ($info as $info){
-             if($info['role']==='user') {
+        <?php foreach ($utilisateurs as $utilisateur){
+            if($utilisateur['role']==='user') {
                 ?>
                     <tr>
-                        <td><?= htmlspecialchars($info['id_user']) ?></td>
-                        <td><?= htmlspecialchars($info['pseudo']) ?></td>
-                        <td><?= htmlspecialchars($info['nom']) ?></td>
-                        <td><?= htmlspecialchars($info['prenom']) ?></td>
-                        <td><?= htmlspecialchars($info['email']) ?></td>
-                        <td><?= htmlspecialchars($info['date_naissance']) ?></td>
-                        <td><?= htmlspecialchars($info['date_creation']) ?></td>
-                        
+                        <td><?= htmlspecialchars($utilisateur['id_user']) ?></td>
+                        <td><?= htmlspecialchars($utilisateur['pseudo']) ?></td>
+                        <td><?= htmlspecialchars($utilisateur['nom']) ?></td>
+                        <td><?= htmlspecialchars($utilisateur['prenom']) ?></td>
+                        <td><?= htmlspecialchars($utilisateur['email']) ?></td>
+                        <td><?= htmlspecialchars($utilisateur['date_naissance']) ?></td>
+                        <td><?= htmlspecialchars($utilisateur['date_creation']) ?></td>
                         <td>
-                            <a href="?page=deleteTask&id_task=<?= $info['id_user'] ?>">Supprimer</a>
+                            <a href="?page=deleteTask&id_task=<?= $utilisateur['id_user'] ?>">Supprimer</a>
                         </td>
                     </tr>
                 <?php
-             }
+            }
         }?>
     </tbody>
 </table>

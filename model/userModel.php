@@ -28,4 +28,7 @@ class UserModel{
         return $resultat[0];
     }
 
+    public function getAllUser() {
+        return $this->bdd->query("SELECT * FROM user")->fetchAll(PDO::FETCH_ASSOC);
+    }
 }

@@ -73,7 +73,7 @@ class UserController{
     }
 
     public function getUserId($email){
-        return $this->model-> getUserId($email);
+       return $this->model-> getUserId($email);
     }
 
     public function details(){
@@ -92,5 +92,11 @@ class UserController{
     {
         $utilisateur = $this->model->getTasksByUser($_SESSION['id_user']);
         include_once 'admin/view/admin.php';
+    }
+
+    public function getAllUser() 
+    {
+        $utilisateurs = $this->model->getAllUser();
+        include_once "admin/view/admin.php";
     }
 }
