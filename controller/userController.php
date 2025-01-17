@@ -62,7 +62,14 @@ class UserController{
                         $_SESSION["prenom"]=$element["prenom"];
                         $_SESSION["email"]=$element["email"];
                         $_SESSION['id_user']=$element['id_user'];
-                        header("Location:index.php");
+                        $_SESSION['role']=$element['role'];
+                        if ($_SESSION['role']==='admin'){
+                            header('Location:index.php?=admin');
+                        }
+                        else{
+                            header("Location:index.php");
+                        }
+                        
                     }
                 }
                 echo "<script>alert('erreur lors de la connection, veuillez reessayer');</script>";

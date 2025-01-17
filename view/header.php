@@ -35,9 +35,16 @@
             <a href="?page=connexion"><img src="img/profil.svg" alt="profil"></a>
           <?php
         }else{
+          if ($_SESSION["role"]=='admin') {
+          ?>
+            <a href="?page=admin"><img src="img/profil.svg" alt="profil"></a>
+          <?php
+          }else{
+      
           ?>
             <a href="?page=utilisateur"><img src="img/profil.svg" alt="profil"></a>
           <?php
+          }
         }
       ?>
       <a href="?page=panier"><img src="img/panier.svg" alt="panier"></a>
