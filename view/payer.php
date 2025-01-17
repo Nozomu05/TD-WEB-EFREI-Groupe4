@@ -1,7 +1,7 @@
-<h1>mon panier<h1>
+<!--<h1>mon panier<h1>
  
 <?php 
-    $prix = 0;
+   /* $prix = 0;
     foreach($produits as $produit){
         $prix += $produit['prix']*$produit['quantite'];
         ?> 
@@ -10,7 +10,7 @@
     }
 ?>
 
-Prix total: <?=$prix?>€ <br>
+Prix total: <?=$prix*/?> <br>
 
 <a href="?page=merci">
     <button>Payer</button>

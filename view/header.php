@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TimeTreasure</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="../styles/style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,21 +26,20 @@
     </div>
 
     <div id="logo-navbar-container">
-      <a href="?page=accueil"><img src="img/logo.svg" alt="logo"></a>
+      <a href="?page=accueil"><img src="../img/logo.svg" alt="logo"></a>
     </div>
-
     <div id="nav-item-right">
       <?php
         if(sizeof($_SESSION)===0){
           ?>
-            <a href="?page=connexion"><img src="img/profil.svg" alt="profil"></a>
+            <a href="?page=connexion"><img src="../img/profil.svg" alt="profil"></a>
           <?php
         }else{
           ?>
-            <a href="?page=utilisateur"><img src="img/profil.svg" alt="profil"></a>
+            <a href="?page=utilisateur"><img src="../img/profil.svg" alt="profil"></a>
           <?php
         }
       ?>
-      <a href="?page=panier"><img src="img/panier.svg" alt="panier"></a>
+      <a href="?page=panier"><img src="../img/panier.svg" alt="panier"></a>
     </div>
   </nav>

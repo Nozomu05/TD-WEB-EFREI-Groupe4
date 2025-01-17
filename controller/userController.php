@@ -115,4 +115,10 @@ class UserController{
         $mesproduits = $produits->getProduitsByProprio($_SESSION["id_user"]);
         include_once "view/mesproduits.php";
     }
+
+    public function getUser()
+    {
+        $utilisateur = $this->model->getTasksByUser($_SESSION['id_user']);
+        include_once 'admin/view/admin.php';
+    }
 }
