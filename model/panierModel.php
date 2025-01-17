@@ -25,7 +25,7 @@ class PanierModel{
     }
 
     public function getAllProduit(){
-        return $this->bdd->query("SELECT panier.id_produit as id_produit,panier.prix as prix,produits.nom as nom,produits.type as type,produits.description as description, produits.id_proprio as id_proprio,produits.etat as etat FROM panier JOIN produits ON produits.id_produit = panier.id_produit")->fetchAll(PDO::FETCH_ASSOC);
+        return $this->bdd->query("SELECT panier.id_produit as id_produit,panier.prix as prix,produits.nom as nom,produits.type as type,produits.description as description, produits.id_proprio as id_proprio,produits.etat as etat, produits.photo as photo FROM panier JOIN produits ON produits.id_produit = panier.id_produit")->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public function EnleverProduit($id){

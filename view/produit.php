@@ -13,11 +13,19 @@
       <?php
     
             if(!$estajouter){
+              if($_SESSION['id_user']===$produit['id_proprio']){
+                ?>
+                    <form action="" method="post">
+                        <input class="btn-primary" type="submit" name="ajout" value="Supprimer">
+                    </form>
+                <?php
+              }else{
                 ?>
                     <form action="" method="post">
                         <input class="btn-primary" type="submit" name="ajout" value="Ajouter au panier">
                     </form>
                 <?php
+              }
             }
         ?>
     </div>

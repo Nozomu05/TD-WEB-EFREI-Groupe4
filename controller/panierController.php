@@ -47,24 +47,16 @@ class PanierController{
         $detail = new ProduitController;
         $produit = $detail -> getProduitsDetail($_GET["id"]);
         $estajouter = array_search($produit['id_produit'] . $produit['nom'],$_SESSION);
-        if(isset($_POST['ajout'])){
-            $nombredeproduit = $this-> getPanier();
-            if ($nombredeproduit['id_produit']===0){
-                $id = $produit['id_produit'];
-                $prix = $produit['prix'];
-                $id_user = $_SESSION['id_user'];
-                $_SESSION[$produit['nom']]=$id . $produit['nom'];
-                $this->model->ajoutPanier($prix,$id_user,$id);
-                echo "<script>alert('Produit ajouté !');</script>";
-                $estajouter = array_search($produit['id_produit'] . $produit['nom'],$_SESSION);
-            }else{
-                $estdanslepanier = false;
-                foreach($this->getId_panier() as $id_produit => $id){
-                    if($id === $produit['id_produit']){
-                        $estdanslepanier = true;
-                    }
-                }
-                if(!$estdanslepanier){
+        if($produit['id_proprio']===$_SESSION['id_user']){
+            if(isset($_POST['ajout'])){
+                $detail->DeleteparId($produit['id_produit']);
+                header("Location:index.php?page=mesproduits");
+            }
+        }
+        else{
+            if(isset($_POST['ajout'])){
+                $nombredeproduit = $this-> getPanier();
+                if ($nombredeproduit['id_produit']===0){
                     $id = $produit['id_produit'];
                     $prix = $produit['prix'];
                     $id_user = $_SESSION['id_user'];
@@ -72,8 +64,24 @@ class PanierController{
                     $this->model->ajoutPanier($prix,$id_user,$id);
                     echo "<script>alert('Produit ajouté !');</script>";
                     $estajouter = array_search($produit['id_produit'] . $produit['nom'],$_SESSION);
-                }
-            }   
+                }else{
+                    $estdanslepanier = false;
+                    foreach($this->getId_panier() as $id_produit => $id){
+                        if($id === $produit['id_produit']){
+                            $estdanslepanier = true;
+                        }
+                    }
+                    if(!$estdanslepanier){
+                        $id = $produit['id_produit'];
+                        $prix = $produit['prix'];
+                        $id_user = $_SESSION['id_user'];
+                        $_SESSION[$produit['nom']]=$id . $produit['nom'];
+                        $this->model->ajoutPanier($prix,$id_user,$id);
+                        echo "<script>alert('Produit ajouté !');</script>";
+                        $estajouter = array_search($produit['id_produit'] . $produit['nom'],$_SESSION);
+                    }
+                }   
+            }
         }
         include_once "view/produit.php";
     }
@@ -84,7 +92,7 @@ class PanierController{
     }
 
     public function fin(){
-        include_once 'merci.php';
+        include_once 'view/merci.php';
     }
     
     

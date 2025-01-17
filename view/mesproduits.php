@@ -5,7 +5,7 @@
   <div id="features-products-container">
   <?php foreach($mesproduits as $produit){
     ?> 
-        <div href="?page=produit&id=<?=$produit['id_produit']?>" id="features-products-container-item">
+        <a href="?page=produit&id=<?=$produit['id_produit']?>" id="features-products-container-item">
             <div id="features-products-container-item-img">
             <img src="<?=$produit['photo']?>" alt="features-products-bottom">
             </div>
@@ -18,8 +18,7 @@
                 <p><?= $produit['prix']?>€</p>
             </div>
             </div>
-            <input class="btn-primary" formmethod="post" type="submit" name="<?=$produit['id_produit']?>" value="Supprimer">
-        </div>
+        </a>
         
     <?php
  }?>
