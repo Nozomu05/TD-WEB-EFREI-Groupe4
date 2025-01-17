@@ -21,7 +21,7 @@ class ProduitController{
     }
     public function getProduitsParTypes($type){
         $produits = $this->model-> getProduitsParTypes($type);
-        include_once "view/accueil.php";
+        include_once 'view/toutlesproduits.php';
     }
     public function ajouterProduit(){
         include "view/ajout.php";

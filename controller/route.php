@@ -13,13 +13,13 @@ switch($page){
         break;
 
     case "quartz":
-        $produits = new ProduitController;
-        $produits -> getProduitsParTypes('quartz');
+        $infos = new ProduitController;
+        $produits = $infos -> getProduitsParTypes('quartz');
         break;
 
     case 'mecanique':
-        $produits = new ProduitController;
-        $produits -> getProduitsParTypes('mécanique');
+        $infos = new ProduitController;
+        $produits  = $infos-> getProduitsParTypes('mécanique');
         break;
 
     case 'toutlesproduits':
