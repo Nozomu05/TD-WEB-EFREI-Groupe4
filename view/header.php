@@ -43,3 +43,5 @@
       <a href="?page=panier"><img src="../img/panier.svg" alt="panier"></a>
     </div>
   </nav>
+
+

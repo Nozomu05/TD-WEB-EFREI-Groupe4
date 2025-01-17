@@ -615,3 +615,17 @@ footer {
   width: 100%;
   gap: 1rem;
 }
+
+/* CTA produits */
+
+#section-cta-produits {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 7rem;
+  max-width: 90%;
+  margin: 0 auto;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  gap: 5rem;
+}
