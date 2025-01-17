@@ -29,4 +29,5 @@ class ProduitModel{
     public function getProduitsByProprio($id){
         return $this->bdd->query("SELECT * FROM produits WHERE id_proprio='$id'")->fetchAll(PDO::FETCH_ASSOC);
     }
+
 }

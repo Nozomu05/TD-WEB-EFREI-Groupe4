@@ -37,4 +37,9 @@ class UserModel{
         $commande = $this->bdd->prepare("DELETE FROM users WHERE id_user=?");
         return $commande -> execute([$id]);
     }
+
+    
+    public function getAllUser() {
+        return $this->bdd->query("SELECT * FROM user")->fetchAll(PDO::FETCH_ASSOC);
+    }
 }

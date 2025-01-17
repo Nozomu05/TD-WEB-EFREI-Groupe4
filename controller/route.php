@@ -85,6 +85,12 @@ switch($page){
         $user -> getProduits();
         break;
 
+    case 'admin':
+        include_once 'controller/userController.php';
+        $user = new UserController;
+        $user -> getAllUser();
+        break;
+
     default:
         include "view/404.php";
 }

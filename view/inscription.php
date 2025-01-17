@@ -4,7 +4,7 @@
     <p>Remplissez le formulaire ci-dessous pour créer votre compte.</p>
   </div>
 
-  <form id="formulaire-bottom" action="?page=connexion" method="post">
+  <form id="formulaire-bottom" action="" method="post">
     <div id="formulaire-bottom-top">
       <div id="nom-container">
         <input type="text" name="prenom" placeholder="Prénom">
