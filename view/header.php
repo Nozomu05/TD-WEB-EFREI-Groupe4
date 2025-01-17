@@ -26,13 +26,13 @@
     </div>
 
     <div id="logo-navbar-container">
-      <a href="?page=accueil"><img src="img/logo.svg" alt="logo"></a>
+      <a href="?page=accueil"><img src="model/img/logo.svg" alt="logo"></a>
     </div>
     <div id="nav-item-right">
       <?php
         if(sizeof($_SESSION)===0){
           ?>
-            <a href="?page=connexion"><img src="img/profil.svg" alt="profil"></a>
+            <a href="?page=connexion"><img src="model/img/profil.svg" alt="profil"></a>
           <?php
         }else{
           if ($_SESSION["role"]=='admin') {
@@ -42,12 +42,12 @@
           }else{
       
           ?>
-            <a href="?page=utilisateur"><img src="img/profil.svg" alt="profil"></a>
+            <a href="?page=utilisateur"><img src="model/img/profil.svg" alt="profil"></a>
           <?php
           }
         }
       ?>
-      <a href="?page=panier"><img src="img/panier.svg" alt="panier"></a>
+      <a href="?page=panier"><img src="model/img/panier.svg" alt="panier"></a>
     </div>
   </nav>
 

@@ -17,9 +17,9 @@ class ProduitModel{
         return $this->bdd->query("SELECT * FROM produits WHERE type='$type'")->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function ajouterProduit($nom,$prix,$description,$etat,$type,$id_proprio){
-        $user = $this->bdd->prepare("INSERT INTO produits(nom,prix,description,etat,type,id_proprio) VALUES(?,?,?,?,?,?)");
-        return $user->execute([$nom,$prix,$description,$etat,$type,$id_proprio]);
+    public function ajouterProduit($nom,$prix,$marque,$description,$endroit,$etat,$type,$id_proprio){
+        $user = $this->bdd->prepare("INSERT INTO produits(nom,prix,marque,description,photo,etat,type,id_proprio) VALUES(?,?,?,?,?,?,?,?)");
+        return $user->execute([$nom,$prix,$marque,$description,$endroit,$etat,$type,$id_proprio]);
     }
 
     public function getProduitsDetail($id_produit){

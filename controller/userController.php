@@ -107,7 +107,9 @@ class UserController{
             ?>
                 <script>
                     if(confirm("êtes-vous sûr de vouloir supprimer votre compte ?")){
-                        $_SESSION['supprimer']="supprimer";
+                       <?php
+                        $_SESSION['supprimer']='supprimer';
+                       ?>
                         window.location.href = "?page=deconnexion";
                     }
                 </script>

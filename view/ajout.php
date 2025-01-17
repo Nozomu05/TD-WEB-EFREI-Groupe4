@@ -3,9 +3,9 @@
     <h1>Vendre une montre</h1>
   </div>
 
-  <form id="formulaire-bottom" action="" method="post">
+  <form id="formulaire-bottom" action="" method="post" enctype="multipart/form-data">
     <div id="formulaire-bottom-top">
-      <input type="file" name="image" placeholder="Ajouter une image" required>
+      <input type="file" name="image" required>
       <input type="text" name="nom" placeholder="Titre" required>
       <textarea name="description" placeholder="Description" required></textarea>
       <div id="prix-marque-container">  

@@ -1,3 +1,8 @@
+<script>
+  function deconnexion(){
+    window.location.href = "?page=deconnexion";
+}
+</script>
 <div id="formulaire">
   <div id="formulaire-top">
     <h1>Mon profil</h1>
@@ -28,6 +33,6 @@
   <h2 class="color-alternate">Consulter mes montres</h2>
   <p class="color-alternate">Parcourez toutes vos montres en vente.</p>
 </div>
-<a class="btn-primary" href="?page=produits">Voir mes montres</a>
+<a class="btn-primary" href="?page=mesproduits">Voir mes montres</a>
 </div>
 </div>
