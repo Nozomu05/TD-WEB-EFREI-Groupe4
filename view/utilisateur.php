@@ -5,6 +5,7 @@
   </div>
 
   <form id="formulaire-bottom" action="" method="post">
+  <input class="btn-primary" type="submit" name="produits" value="Mes produits">
     <div id="formulaire-bottom-top">
       <div id="nom-container">
         <input type="text" name="prenom" placeholder="<?=$infos['prenom']?>" required>
@@ -18,6 +19,7 @@
       <input class="btn-primary" type="submit" name="save" value="Sauvegarder">
       <input class="btn-delete" type="submit" name="del" value="Supprimer mon compte">
     </div>
+    <input class="btn-primary" type="submit" name="deconnexion" value="Déconnexion">
   </form>
 
 </div>
