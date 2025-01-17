@@ -18,6 +18,7 @@
                 <p><?= $produit['prix']?>€</p>
             </div>
             </div>
+            <input class="btn-primary" type="submit" value="Supprimer">
         </a>
     <?php
  }?>
