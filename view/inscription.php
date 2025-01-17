@@ -13,7 +13,7 @@
       <input type="date" name="date" placeholder="Date de naissance">
       <input type="text" name="pseudo" placeholder="Pseudo">
       <input type="text" name="email" placeholder="Email">
-      <input type="text" name="mdp" placeholder="Mot de passe">
+      <input type="password" name="mdp" placeholder="Mot de passe">
     </div>
     <div id="formulaire-button-container-vertical">
       <input class="btn-primary" type="submit" value="S'inscrire maintenant">

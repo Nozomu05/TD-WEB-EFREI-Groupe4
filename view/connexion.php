@@ -7,7 +7,7 @@
   <form id="formulaire-bottom" action="" method="post">
     <div id="formulaire-bottom-top">
       <input type="text" name="email" placeholder="Email">
-      <input type="text" name="mdp" placeholder="Mot de passe">
+      <input type="password" name="mdp" placeholder="Mot de passe">
     </div>
     <div id="formulaire-button-container-vertical">
       <input class="btn-primary" type="submit" value="Se connecter">
