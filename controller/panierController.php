@@ -83,6 +83,9 @@ class PanierController{
         include_once "view/payer.php";
     }
 
+    public function fin(){
+        include_once 'merci.php';
+    }
     
     
 }
