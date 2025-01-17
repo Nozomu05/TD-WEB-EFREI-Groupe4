@@ -20,9 +20,9 @@
         </select>
         <select name="etat">
           <option value="defaut" selected>Choisir un état</option>
-          <option value="neuf">neuf</option>
-          <option value="peu usé">peu usé</option>
-          <option value="usé">usé</option>
+          <option value="mauvais">mauvais</option>
+          <option value="bon">bon</option>
+          <option value="très bon">très bon</option>
         </select>
         </div>
     </div>
