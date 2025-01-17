@@ -13,13 +13,13 @@ switch($page){
         break;
 
     case "quartz":
-        $produits = new ProduitController;
-        $produits -> getProduitsParTypes('quartz');
+        $infos = new ProduitController;
+        $produits = $infos -> getProduitsParTypes('quartz');
         break;
 
     case 'mecanique':
-        $produits = new ProduitController;
-        $produits -> getProduitsParTypes('mécanique');
+        $infos = new ProduitController;
+        $produits  = $infos-> getProduitsParTypes('mécanique');
         break;
 
     case 'toutlesproduits':
@@ -45,6 +45,7 @@ switch($page){
         break;
 
     case "deconnexion":
+        
         $_SESSION=[];
         header("Location: index.php");
         break;
