@@ -67,4 +67,8 @@ class ProduitController{
     public function getProduitsByProprio($id){
         return $this->model -> getProduitsByProprio($id);
     }
+
+    public function DeleteparId($id){
+        $this->model->DeleteparId($id);
+    }
 }

@@ -135,6 +135,12 @@ class UserController{
         include_once "controller/produitController.php";
         $produits = new ProduitController;
         $mesproduits = $produits->getProduitsByProprio($_SESSION["id_user"]);
+        foreach($mesproduits as $produit){
+            if(isset($_POST[$produit['id_produit']])){
+                $produits->DeleteparId($produit['id_produit']);
+                header("Location:index.php?page=mesproduits");
+            }
+        }
         include_once "view/mesproduits.php";
     }
 

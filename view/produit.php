@@ -1,6 +1,4 @@
-<?php
-  print_r($_SESSION);
-?>
+
 <div id="product-detail">
     <div id="product-detail-left">
       <img src="<?=$produit['photo']?>" alt="montre">
