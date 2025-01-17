@@ -1,6 +1,6 @@
 <footer>
   <div id="footer-top">
-    <img src="img/logo.svg" alt="logo">
+    <img src="model/img/logo.svg" alt="logo">
     <div id="footer-nav">
       <a href="?page=accueil">Toutes les montres</a>
       <a href="?page=quartz">Quartz</a>

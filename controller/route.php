@@ -19,7 +19,7 @@ switch($page){
 
     case 'mecanique':
         $infos = new ProduitController;
-        $produits  = $infos-> getProduitsParTypes('mécanique');
+        $produits  = $infos-> getProduitsParTypes('mecanique');
         break;
 
     case 'toutlesproduits':
@@ -45,7 +45,11 @@ switch($page){
         break;
 
     case "deconnexion":
-        
+        if(array_search('supprimer',$_SESSION)){
+            include_once 'model/userModel.php';
+            $del = new UserModel();
+            $del -> DeleteUser($_SESSION['id_user']);
+        };
         $_SESSION=[];
         header("Location: index.php");
         break;

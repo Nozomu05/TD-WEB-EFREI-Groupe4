@@ -18,7 +18,7 @@
             ?> 
                 <a href="?page=produit&id=<?=$produit['id_produit']?>" id="features-products-container-item">
                     <div id="features-products-container-item-img">
-                        <img src="../img/features-products-bottom4.webp" alt="features-products-bottom">
+                        <img src="<?=$produit['photo']?>" alt="features-products-bottom">
                     </div>
                     <div id="features-products-container-item-text">
                         <div id="features-products-container-item-text-top">

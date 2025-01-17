@@ -1,6 +1,6 @@
 <div id="product-detail">
     <div id="product-detail-left">
-      <img src="img/product-detail-image.webp" alt="montre">
+      <img src="<?=$produit['photo']?>" alt="montre">
     </div>
     <div id="product-detail-right">
       <div id="product-detail-right-top">
@@ -8,7 +8,7 @@
         <p id="product-detail-right-top-price" class="element-left"><?=$produit['prix'] ?>€</p>
       </div>
       <p class="element-left">fasjlkdfkdsjfoiskjdfoksfjksdfkjasd; flkaslk dfjsaldkfjsalkfjsal;fjksajd flkasdjflksdafjdsalkjfdsdalkf jsadlkfjsadlfkjsadlkfjaslkdfjsdlkfdjsadlkfj</p>
-      <p class="element-left"><?=$produit['type']?> | <?=$produit["etat"]?></p>
+      <p class="element-left"><?=$produit['type']?> | <?=$produit["etat"]?> | <?=$produit['marque']?></p>
       <?php
     
             if(!$estajouter){

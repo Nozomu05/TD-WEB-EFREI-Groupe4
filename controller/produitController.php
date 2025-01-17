@@ -24,25 +24,28 @@ class ProduitController{
         include_once 'view/toutlesproduits.php';
     }
     public function ajouterProduit(){
-        include "view/ajout.php";
         if(isset($_POST['type'])){
+            $file = $_FILES['image'];
+            $endroit = "model/img/" . basename($file['name']);
+            move_uploaded_file($file['tmp_name'],$endroit);
             $nom = $_POST['nom'];
             $prix = $_POST['prix'];
             $etat = $_POST['etat'];
             $type = $_POST['type'];
+            $marque = $_POST['marque'];
             $description = $_POST["description"];
             include_once "controller/userController.php";
             $userinfo = new UserController;
             $userId = $userinfo ->getUserId($_SESSION["email"]);
             $id_proprio = $userId["id_user"];
-            if($this->model->ajouterProduit($nom,$prix,$description,$etat,$type,$id_proprio)){
-                echo "produit ajoute";
-                include_once "index.php";
+            if($this->model->ajouterProduit($nom,$prix,$marque,$description,$endroit,$etat,$type,$id_proprio)){
+                header("Location:index.php?page=mesproduits");
             }
             else{
                 echo "echec";
             }
         }
+        include "view/ajout.php";
     }
 
     public function getProduitsDetail($id){
