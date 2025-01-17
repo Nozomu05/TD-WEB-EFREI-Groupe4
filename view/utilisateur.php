@@ -5,7 +5,7 @@
   </div>
 
   <form id="formulaire-bottom" action="" method="post">
-  <a class="btn-primary" href="?page=produits">Mes produits</a>
+  <a class="btn-primary" href="?page=mesproduits">Mes produits</a>
     <div id="formulaire-bottom-top">
       <div id="nom-container">
         <input type="text" name="prenom" placeholder="<?=$infos['prenom']?>" required>
