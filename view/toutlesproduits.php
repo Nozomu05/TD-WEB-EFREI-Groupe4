@@ -6,7 +6,7 @@
 
     <div id="product-filter">
         <select id="category" onchange="changeoption()">
-          <option value=""></optionval>
+          <option value="">Sélectionnez une option</optionval>
           <option value="all">Toutes les montres</option>
           <option value="quartz">Quartz</option>
           <option value="mecanique">Mécanique</option>

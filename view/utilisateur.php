@@ -10,8 +10,8 @@
         <input type="text" name="nom" value="<?=$infos['nom']?>"required>
       </div>
       <input type="text" name="email" value="<?=$infos['email']?>"required>
-      <input type="text" name="mdp" value="Nouveau mot de passe" required>
-      <input type="text" name="mdp_conf" value="Confirmer mot de passe"required>
+      <input type="text" name="mdp" value=" " required>
+      <input type="text" name="mdp_conf" value=" "required>
     </div>
     <div id="formulaire-button-container">
       <input class="btn-primary" type="submit" name="save" value="Sauvegarder">

@@ -20,7 +20,7 @@
 
   <nav id="navbar">
     <div id="nav-item-left">
-      <a href="?page=accueil">Montres</a>
+      <a href="?page=toutlesproduits">Montres</a>
       <a href="?page=quartz">Quartz</a>
       <a href="?page=mecanique">Mécaniques</a>
     </div>
@@ -34,17 +34,17 @@
           ?>
             <a href="?page=connexion"><img src="model/img/profil.svg" alt="profil"></a>
           <?php
-        }else{
-          if ($_SESSION["role"]=='admin') {
+        }
+        else if($_SESSION['role']==='admin'){
           ?>
-            <a href="?page=admin"><img src="img/profil.svg" alt="profil"></a>
+            <a href="?page=admin"><img src="model/img/profil.svg" alt="profil"></a>
           <?php
-          }else{
-      
+        }
+        else{
+          
           ?>
             <a href="?page=utilisateur"><img src="model/img/profil.svg" alt="profil"></a>
           <?php
-          }
         }
       ?>
       <a href="?page=panier"><img src="model/img/panier.svg" alt="panier"></a>
