@@ -40,6 +40,6 @@ class UserModel{
 
     
     public function getAllUser() {
-        return $this->bdd->query("SELECT * FROM user")->fetchAll(PDO::FETCH_ASSOC);
+        return $this->bdd->query("SELECT * FROM users WHERE role = '{user}'")->fetchAll(PDO::FETCH_ASSOC);
     }
 }

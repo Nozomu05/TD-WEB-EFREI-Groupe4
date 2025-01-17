@@ -13,7 +13,6 @@
     </thead>
     <tbody>
         <?php foreach ($utilisateurs as $utilisateur){
-            if($utilisateur['role']==='user') {
                 ?>
                     <tr>
                         <td><?= htmlspecialchars($utilisateur['id_user']) ?></td>
@@ -28,7 +27,6 @@
                         </td>
                     </tr>
                 <?php
-            }
         }?>
     </tbody>
 </table>
