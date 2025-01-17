@@ -1,6 +1,6 @@
 
 <div id="hero-section">
-
+    <a class="btn-primary" href="?page=deconnexion">Déconnexion</a>
     <div id="hero-section-top">
         <div id="hero-section-small-top">
             <h1>Liste utilisateur</h1>
@@ -35,9 +35,9 @@
                             <td><?= htmlspecialchars($utilisateur['date_naissance']) ?></td>
                             <td><?= htmlspecialchars($utilisateur['date_creation']) ?></td>
                             <td>
-                                <div x-data="{}">
-                                    <a href="#" @click.prevent="if (confirm('Êtes-vous sûr de vouloir supprimer cet utilisateur ?')) { window.location.href = '?page=deleteTask&id_task=<?= $utilisateur['id_user'] ?>'; }">Supprimer</a>
-                                </div>
+                                <form x-data="{}">
+                                    <input class="btn-delete" type="submit" name="del" value="Supprimer le compte">
+                                </form>
                             </td>
                         </tr>
                     <?php } ?>

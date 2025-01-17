@@ -35,7 +35,7 @@
             <a href="?page=connexion"><img src="model/img/profil.svg" alt="profil"></a>
           <?php
         }
-        else if($_SESSION['role']==='admin'){
+        else if($_SESSION['role']==='{admin}'){
           ?>
             <a href="?page=admin"><img src="model/img/profil.svg" alt="profil"></a>
           <?php

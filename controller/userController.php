@@ -63,8 +63,8 @@ class UserController{
                         $_SESSION["email"]=$element["email"];
                         $_SESSION['id_user']=$element['id_user'];
                         $_SESSION['role']=$element['role'];
-                        if ($_SESSION['role']==='admin'){
-                            header('Location:index.php?=admin');
+                        if ($_SESSION['role']==='{admin}'){
+                            header('Location:index.php?page=admin');
                         }
                         else{
                             header("Location:index.php");
