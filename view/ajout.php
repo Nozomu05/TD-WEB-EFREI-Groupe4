@@ -9,7 +9,7 @@
       <input type="text" name="nom" placeholder="Titre" required>
       <textarea name="description" placeholder="Description" required></textarea>
       <div id="prix-marque-container">  
-        <input type="text" name="prix" placeholder="Prix" required>
+        <input type="numeric" name="prix" placeholder="Prix" required>
         <input type="text" name="marque" placeholder="Marque" required>
       </div>
       <div id="type-etat-container">
