@@ -12,6 +12,4 @@ function changeoption() {
 
 }
 
-function deconnexion(){
-  window.location.href = "?page=deconnexion";
-}
+
