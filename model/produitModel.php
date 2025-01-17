@@ -30,4 +30,8 @@ class ProduitModel{
         return $this->bdd->query("SELECT * FROM produits WHERE id_proprio='$id'")->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    public function getProduitsDecroissant(){
+        return $this->bdd->query("SELECT * FROM produits ORDER BY id_produit DESC")->fetchAll(PDO::FETCH_ASSOC);
+    }
+
 }
