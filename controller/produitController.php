@@ -18,7 +18,7 @@ class ProduitController{
             include_once "view/accueil.php";
         }else{
             $produits = [];
-            for($i=0;$i<=4;$i++){
+            for($i=0;$i<4;$i++){
                 array_push($produits,$produitsliste[$i]);
             }
             include_once "view/accueil.php";

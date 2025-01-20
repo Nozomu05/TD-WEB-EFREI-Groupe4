@@ -33,8 +33,8 @@ class PanierModel{
         return $commande->execute([$id]);
     }
 
-    public function Clearpanier(){
-        $commande= $this->bdd->prepare("TRUNCATE TABLE panier");
-        return $commande->execute();
+    public function Clearpanier($id){
+        $commande= $this->bdd->prepare("DELETE FROM produits WHERE id_produit=?");
+        return $commande->execute([$id]);
     }
 }

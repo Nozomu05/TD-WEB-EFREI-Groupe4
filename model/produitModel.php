@@ -23,7 +23,7 @@ class ProduitModel{
     }
 
     public function getProduitsDetail($id_produit){
-        return $this->bdd->query("SELECT * FROM produits WHERE id_produit = $id_produit")->fetchAll(PDO::FETCH_ASSOC);
+        return $this->bdd->query("SELECT * FROM produits WHERE id_produit = '$id_produit'")->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public function getProduitsByProprio($id){

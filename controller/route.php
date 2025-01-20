@@ -45,13 +45,9 @@ switch($page){
         break;
 
     case "deconnexion":
-        if(array_search('supprimer',$_SESSION)){
-            include_once 'model/userModel.php';
-            $del = new UserModel();
-            $del -> DeleteUser($_SESSION['id_user']);
-        };
-        $_SESSION=[];
-        header("Location: index.php");
+        include_once "controller/userController.php";
+        $user = new UserController;
+        $user -> deconnexion();
         break;
 
     case "produit":

@@ -29,7 +29,7 @@ class UserController{
                 $pseudonyme = $_POST["pseudo"];
                 $email = $_POST["email"];
                 $date_naissance = $_POST["date"];
-                $mdp = password_hash($_POST["mdp"],PASSWORD_DEFAULT);
+                $mdp = password_hash($_POST['mdp'],PASSWORD_DEFAULT);
                 if($this->model->inscription($nom,$prenom,$pseudonyme,$email,$mdp,$date_naissance)){
                     echo "<script>alert('inscription reussite');</script>";
                 } else{
@@ -54,10 +54,11 @@ class UserController{
             }
             if(!$oui){
                 echo "<script>alert('le compte n'existe pas, veuillez vous inscrire');</script>";
+                $this->getFormConnexion();
             }else{
                 $query = $this->model-> getUserByEmail($_POST["email"]);
                 foreach($query as $element){
-                    if(password_verify($_POST["mdp"], $element["mdp"])){
+                    if(password_verify($_POST["mdp"],$element["mdp"])){
                         $_SESSION["nom"]=$element["nom"];
                         $_SESSION["prenom"]=$element["prenom"];
                         $_SESSION["email"]=$element["email"];
@@ -85,48 +86,35 @@ class UserController{
 
     public function details(){
         $infos = $this->model->details($_SESSION["id_user"]);
-        if(isset($_POST['mdp'])){
-            if(isset($_POST['save'])){
-                if($_POST['mdp']===$_POST['mdp_conf'] and $_POST['mdp']!==" "){
-                    $prenom = $_POST['prenom'];
-                    $nom = $_POST['nom'];
-                    $email = $_POST['email'];
-                    $mdp = $_POST['mdp'];
-                    $id_user = $_SESSION['id_user'];
-                    $this->model->UpdateUser($prenom,$nom,$email,$mdp,$id_user);
-                    header("Location:index.php?page=utilisateur");
-                }else if($_POST['mdp']===$_POST['mdp_conf'] and $_POST['mdp']===" "){
-                    $prenom = $_POST['prenom'];
-                    $nom = $_POST['nom'];
-                    $email = $_POST['email'];
-                    $mdp = $_POST['mdp'];
-                    $id_user = $_SESSION['id_user'];
-                    $mdp = $infos['mdp'];
-                    $this->model->UpdateUser($prenom,$nom,$email,$mdp,$id_user);
-                    header("Location:index.php?page=utilisateur");
-                }else{
-                    echo 
+        if(isset($_POST['save'])){
+            if(isset($_POST['mdp']) && $_POST['mdp']===$_POST['mdp_conf']){
+                $prenom = $_POST['prenom'];
+                $nom = $_POST['nom'];
+                $email = $_POST['email'];
+                $mdp =password_hash($_POST['mdp'],PASSWORD_DEFAULT);
+                $id_user = $_SESSION['id_user'];
+                $this->model->UpdateUser($prenom,$nom,$email,$mdp,$id_user);
+                header("Location:index.php?page=utilisateur");  
+            }else if(isset($_POST['mdp']) && $_POST['mdp']!==$_POST['mdp_conf']){ 
+                echo 
                     "
                         <script>alert('le mot de passe n'est pas le même')</script>
                     ";
-                }
+            }else{
+                $prenom = $_POST['prenom'];
+                $nom = $_POST['nom'];
+                $email = $_POST['email'];
+                $mdp =$infos['mdp'];
+                $id_user = $_SESSION['id_user'];
+                $this->model->UpdateUser($prenom,$nom,$email,$mdp,$id_user);
+                header("Location:index.php?page=utilisateur"); 
             }
-            
-        }
-        if(isset($_POST['del'])){
-            ?>
-                <script>
-                    if(confirm("êtes-vous sûr de vouloir supprimer votre compte ?")){
-                       <?php
-                        $_SESSION['supprimer']='supprimer';
-                       ?>
-                        window.location.href = "?page=deconnexion";
-                    }
-                </script>
-            <?php
         }
         if(isset($_POST['deconnexion'])){
-            header("Location:index.php?page=deconnexion");
+            echo "<script>deconnexion();</script>";
+        }
+        else if(isset($_POST['delacc'])){
+            echo "<script>delacc();";
         }
         include_once "view/utilisateur.php";
     }
@@ -142,5 +130,18 @@ class UserController{
     {
         $utilisateurs = $this->model->getAllUser();
         include_once "admin/view/admin.php";
+    }
+
+    public function deconnexion(){
+        if(isset($_GET['id'])){
+            include_once 'model/userModel.php';
+            $del = new UserModel;
+            $del -> DeleteUser($_SESSION['id_user']);
+            $_SESSION=[];
+            header("Location: index.php");
+        }else{
+            $_SESSION=[];
+            header("Location: index.php");
+        }
     }
 }

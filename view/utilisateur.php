@@ -6,18 +6,19 @@
   <form id="formulaire-bottom" action="" method="post">
     <div id="formulaire-bottom-top">
       <div id="nom-container">
-        <input type="text" name="prenom" value="<?=$infos['prenom']?>" required>
-        <input type="text" name="nom" value="<?=$infos['nom']?>"required>
+        <input type="text" name="prenom" value="<?= $infos['prenom']?>" >
+        <input type="text" name="nom" value="<?= $infos['nom']?>">
       </div>
-      <input type="text" name="email" value="<?=$infos['email']?>"required>
-      <input type="text" name="mdp" value=" "required>
-      <input type="text" name="mdp_conf" value=" " required>
+      <input type="text" name="email" value="<?= $infos['email']?>">
+      <input type="password" name="mdp" placeholder="Entrez votre nouveau mot de passe">
+      <input type="password" name="mdp_conf" placeholder="Confirmez votre nouveau mot de passe">
     </div>
     <div id="formulaire-button-container">
       <input class="btn-primary" type="submit" name="save" value="Sauvegarder">
-      <input class="btn-primary" type="submit" name="deconnexion" value="Déconnexion">
+      
+      <input class="btn-primary" type="button" onclick="deconnexion()" value="Déconnexion">
     </div>
-    <input class="btn-delete" type="submit" name="del" value="Supprimer mon compte">
+    <input class="btn-delete" type="button" onclick="delacc()" value="Supprimer mon compte">
   </form>
 
 </div>

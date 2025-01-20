@@ -47,7 +47,7 @@ class PanierController{
         $detail = new ProduitController;
         $produit = $detail -> getProduitsDetail($_GET["id"]);
         $estajouter = array_search($produit['id_produit'] . $produit['nom'],$_SESSION);
-        if($produit['id_proprio']===$_SESSION['id_user']){
+        if(array_key_exists("id_user",$_SESSION) && $produit['id_proprio']===$_SESSION['id_user']){
             if(isset($_POST['ajout'])){
                 $detail->DeleteparId($produit['id_produit']);
                 header("Location:index.php?page=mesproduits");
@@ -92,6 +92,10 @@ class PanierController{
     }
 
     public function fin(){
+        $produits = $this->getAllProduit();
+        foreach($produits as $produit){
+            $this->model->Clearpanier($produit['id_produit']);
+        }
         include_once 'view/merci.php';
     }
     
