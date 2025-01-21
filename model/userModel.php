@@ -19,10 +19,6 @@ class UserModel{
         return $this->bdd->query("SELECT email FROM users")->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function getUserId($email){
-        return $this->bdd->query("SELECT id_user FROM users WHERE email = '$email'")->fetch(PDO::FETCH_ASSOC);
-    }
-
     public function details($id){
         $resultat= $this->bdd->query("SELECT * from users WHERE id_user='$id'")->fetchAll(PDO::FETCH_ASSOC);
         return $resultat[0];

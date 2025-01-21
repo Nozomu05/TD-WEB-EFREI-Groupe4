@@ -80,10 +80,6 @@ class UserController{
         }
     }
 
-    public function getUserId($email){
-       return $this->model-> getUserId($email);
-    }
-
     public function details(){
         $infos = $this->model->details($_SESSION["id_user"]);
         if(isset($_POST['save'])){

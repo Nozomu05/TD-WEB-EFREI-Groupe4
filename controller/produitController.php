@@ -44,10 +44,7 @@ class ProduitController{
             $type = $_POST['type'];
             $marque = $_POST['marque'];
             $description = $_POST["description"];
-            include_once "controller/userController.php";
-            $userinfo = new UserController;
-            $userId = $userinfo ->getUserId($_SESSION["email"]);
-            $id_proprio = $userId["id_user"];
+            $id_proprio = $_SESSION['id_user'];
             if($this->model->ajouterProduit($nom,$prix,$marque,$description,$endroit,$etat,$type,$id_proprio)){
                 header("Location:index.php?page=mesproduits");
             }
